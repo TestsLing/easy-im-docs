@@ -1,0 +1,47 @@
+image: node:10.15.3
+
+stages:
+  - build
+  - deploy
+
+
+vue-build:
+  stage: build
+  only:
+    - master
+  script:
+    - npm cache verify
+    - npm install
+    - npm run build
+  cache:
+    key: "$CI_PROJECT_NAME_$CI_JOB_NAME"
+    paths:
+      - node_modules
+  artifacts:
+    name: "$CI_COMMIT_REF_NAME-$CI_COMMIT_SHA"
+    expire_in: 1 day
+    paths:
+      - public
+
+
+deploy-prod:
+  image: kroniak/ssh-client
+  only:
+    - master
+  stage: deploy
+  needs:
+    - vue-build
+  script:
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - echo "$SSH_PRIVATE_KEY_STAGING" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa && shopt -s expand_aliases && alias ssh="ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no $DEPLOY_SERVER_USER@$DEPLOY_SERVER_HOST_PUB"
+    - scp -r public $DEPLOY_SERVER_USER@$DEPLOY_SERVER_HOST_PUB:$PROJECT_DIR
+
+
+
+
+
+
+
