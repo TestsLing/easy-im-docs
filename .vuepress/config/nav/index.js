@@ -1,24 +1,23 @@
 module.exports = {
   'zh': [
-    // { 
-    //   text: '文档', 
-    //   icon: 'reco-api',
-    //   items: [
-    //     { 
-    //       text: '主题', items: [
-    //         { text: '1.x', link: '/views/1.x/' },
-    //         { text: '0.x', link: '/views/0.x/' }
-    //       ],
-    //     },
-    //     {
-    //       text: '插件', items: [
-    //         { text: '官方插件', link: '/views/plugins/index.html' },
-    //         { text: '插件广场', link: '/views/other/recommend.html' }
-    //       ]
-    //     }
-    //   ]
-    // },
-    {text: '文档', link: '/views/im/', icon: 'reco-api'},
+    { 
+      text: '文档', 
+      icon: 'reco-api',
+      items: [
+        { 
+          text: '腾讯IM', items: [
+            { text: '1.0', link: '/views/im/' },
+            // { text: '1.x', link: '/views/1.x/' },
+          ],
+        },
+        {
+          text: '网易IM', items: [
+            { text: '1.0', link: '/views/im/' },
+          ]
+        }
+      ]
+    },
+    // {text: '文档', link: '/views/im/', icon: 'reco-api'},
     { text: '常见问题', link: '/views/other/question', icon: 'reco-faq' },
     { text: '博文', link: '/categories/blog/', icon: 'reco-blog'}, 
     { text: '优秀博客', link: '/views/other/theme-example.html', icon: 'reco-category'},

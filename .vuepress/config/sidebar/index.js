@@ -2,60 +2,115 @@ module.exports = {
   'zh': Object.assign({}, {
     '/views/im/': [
       {
-        title: '基础',
+        title: '腾讯IM开始使用',
         collapsable: false,
         children: [
           '',
-        ]
-      }
-    ],
-    '/views/0.x/': [
-      {
-        title: '基础',
-        collapsable: false,
-        children: [
-          '',
-          'installUse',
-          'category',
-          'tag',
+          'installation',
+          'integration',
+          'troubleshooting',
+          'introduction',
+          'tutorial',
+          'configuration',
         ]
       },
       {
-        title: '进阶',
+        title: '账号管理',
         collapsable: false,
         children: [
-          'timeline',
-          'valine',
-          'password',
-          'configJs',
-          'home'
+
         ]
       },
       {
-        title: '其他',
+        title: '单聊消息',
         collapsable: false,
         children: [
-          'abstract',
+
+        ]
+      },
+      {
+        title: '资料管理',
+        collapsable: false,
+        children: [
+
+        ]
+      },
+      {
+        title: '光系链管理',
+        collapsable: false,
+        children: [
+
+        ]
+      },
+      {
+        title: '群组管理',
+        collapsable: false,
+        children: [
+
+        ]
+      },
+      {
+        title: '全局禁言管理',
+        collapsable: false,
+        children: [
+
+        ]
+      },
+      {
+        title: '运营管理',
+        collapsable: false,
+        children: [
+
         ]
       }
     ],
-    '/views/plugins/': [
-      {
-        title: '插件',
-        collapsable: true,
-        children: [
-          '',
-          'backToTop',
-          'pagation',
-          'screenfull',
-          'loadingPage',
-          'kanbanniang',
-          'comments',
-          'extractCode',
-          'rss',
-          'bgmPlayer'
-        ]
-      }
-    ]
+    // '/views/0.x/': [
+    //   {
+    //     title: '基础',
+    //     collapsable: false,
+    //     children: [
+    //       '',
+    //       'installUse',
+    //       'category',
+    //       'tag',
+    //     ]
+    //   },
+    //   {
+    //     title: '进阶',
+    //     collapsable: false,
+    //     children: [
+    //       'timeline',
+    //       'valine',
+    //       'password',
+    //       'configJs',
+    //       'home'
+    //     ]
+    //   },
+    //   {
+    //     title: '其他',
+    //     collapsable: false,
+    //     children: [
+    //       'abstract',
+    //     ]
+    //   }
+    // ],
+    // '/views/plugins/': [
+    //   {
+    //     title: '插件',
+    //     collapsable: true,
+    //     children: [
+    //       '',
+    //       'backToTop',
+    //       'pagation',
+    //       'screenfull',
+    //       'loadingPage',
+    //       'kanbanniang',
+    //       'comments',
+    //       'extractCode',
+    //       'rss',
+    //       'bgmPlayer'
+    //     ]
+    //   }
+    // ]
   }),
 }
