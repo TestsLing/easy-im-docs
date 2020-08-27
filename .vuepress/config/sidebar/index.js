@@ -36,10 +36,13 @@ module.exports = {
         ]
       },
       {
-        title: '光系链管理',
+        title: '关系链管理',
         collapsable: false,
         children: [
-
+          'addFriend',
+          'importFriend',
+          'updateFriend',
+          'delFriend'
         ]
       },
       {
