@@ -5,13 +5,13 @@ module.exports = {
         title: '腾讯IM开始使用',
         collapsable: false,
         children: [
-          '',
-          'installation',
-          'integration',
-          'troubleshooting',
-          'introduction',
-          'tutorial',
-          'configuration',
+          'base/',
+          'base/installation',
+          'base/integration',
+          'base/troubleshooting',
+          'base/introduction',
+          'base/tutorial',
+          'base/configuration',
         ]
       },
       {
@@ -49,10 +49,20 @@ module.exports = {
         title: '关系链管理',
         collapsable: false,
         children: [
-          'addFriend',
-          'importFriend',
-          'updateFriend',
-          'delFriend'
+          'sns/addFriend',
+          'sns/importFriend',
+          'sns/updateFriend',
+          'sns/deleteFriend',
+          'sns/deleteAllFriend',
+          'sns/checkFriend',
+          'sns/getFriends',
+          'sns/getFriendList',
+          'sns/addBlackList',
+          'sns/delBlackList',
+          'sns/pullBlackList',
+          'sns/checkBlackList',
+          'sns/addGroup',
+          'sns/delGroup',
         ]
       },
       {

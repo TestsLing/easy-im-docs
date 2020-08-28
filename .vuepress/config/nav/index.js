@@ -6,7 +6,7 @@ module.exports = {
       items: [
         {
           text: '腾讯IM', items: [
-            { text: '1.0', link: '/views/tencent/1.0/' },
+            { text: '1.0', link: '/views/tencent/1.0/base/index' },
             // { text: '1.x', link: '/views/1.x/' },
           ],
         },
