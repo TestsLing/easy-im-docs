@@ -32,7 +32,7 @@ module.exports = {
         children: [
           'singleChat/queryMsg',
           'singleChat/withdrawMsg',
-          'singleChat/sendMsg',
+          'singleChat/sendMsg.md',
           'singleChat/batchSendMsg',
           'singleChat/importMsg',
         ]
@@ -59,7 +59,28 @@ module.exports = {
         title: '群组管理',
         collapsable: false,
         children: [
-          'group'
+          'group/addMember',
+          'group/changeOwner',
+          'group/create',
+          'group/deleteGroupMsg',
+          'group/deleteMember',
+          'group/destroy',
+          'group/forbidMsg',
+          'group/get',
+          'group/getGroupShut',
+          'group/getJoined',
+          'group/getMember',
+          'group/getMsgSimple',
+          'group/getRole',
+          'group/importGroup',
+          'group/importGroupMember',
+          'group/importGroupMsg',
+          'group/modify',
+          'group/modifyMember',
+          'group/recallGroupMsg',
+          'group/sendMsg',
+          'group/sendNotification',
+          'group/setUnreadMsgNum',
         ]
       },
       {
