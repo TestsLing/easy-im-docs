@@ -18,21 +18,31 @@ module.exports = {
         title: '账号管理',
         collapsable: false,
         children: [
-
+          'account/accountCheck',
+          'account/accountDelete',
+          'account/accountImport',
+          'account/queryState',
+          'account/kick',
+          'account/multiAccountImport',
         ]
       },
       {
         title: '单聊消息',
         collapsable: false,
         children: [
-
+          'singleChat/queryMsg',
+          'singleChat/withdrawMsg',
+          'singleChat/sendMsg',
+          'singleChat/batchSendMsg',
+          'singleChat/importMsg',
         ]
       },
       {
         title: '资料管理',
         collapsable: false,
         children: [
-
+          'profile/getPortrait',
+          'profile/setPortrait',
         ]
       },
       {
