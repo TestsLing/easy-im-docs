@@ -18,12 +18,12 @@ module.exports = {
         title: '账号管理',
         collapsable: false,
         children: [
-          'account/accountCheck',
-          'account/accountDelete',
           'account/accountImport',
-          'account/queryState',
-          'account/kick',
           'account/multiAccountImport',
+          'account/accountDelete',
+          'account/accountCheck',
+          'account/kick',
+          'account/queryState',
         ]
       },
       {
