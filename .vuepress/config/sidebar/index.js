@@ -1,6 +1,6 @@
 module.exports = {
   'zh': Object.assign({}, {
-    '/views/im/': [
+    '/views/tencent/1.0/': [
       {
         title: '腾讯IM开始使用',
         collapsable: false,
@@ -49,21 +49,24 @@ module.exports = {
         title: '群组管理',
         collapsable: false,
         children: [
-
+          'group'
         ]
       },
       {
         title: '全局禁言管理',
         collapsable: false,
         children: [
-
+            'speak/getGlobalNoSpeaking',
+            'speak/setGlobalNoSpeaking',
         ]
       },
       {
         title: '运营管理',
         collapsable: false,
         children: [
-
+          'operate/getAppInfo',
+          'operate/getHistory',
+          'operate/getIPList',
         ]
       }
     ],
