@@ -30,11 +30,11 @@ module.exports = {
         title: '单聊消息',
         collapsable: false,
         children: [
-          'singleChat/queryMsg',
-          'singleChat/withdrawMsg',
-          'singleChat/sendMsg.md',
+          'singleChat/sendMsg',
           'singleChat/batchSendMsg',
           'singleChat/importMsg',
+          'singleChat/queryMsg',
+          'singleChat/withdrawMsg',
         ]
       },
       {
