@@ -2,3 +2,13 @@
 title: 删除黑名单
 date: 2020-08-27
 ---
+```php
+
+/**
+* @param string $fromAccount 需要删除该 user_id 的黑名单
+* @param array  $toAccount   待删除的黑名单的 user_id 列表，单次请求的 To_Account 数不得超过1000
+*/
+
+$result = $sns->black_list->del('from_account', ['to_account1','to_account2',...]);
+
+```
