@@ -18,23 +18,23 @@ module.exports = {
         title: '账号管理',
         collapsable: false,
         children: [
-          'account/accountCheck',
-          'account/accountDelete',
           'account/accountImport',
-          'account/queryState',
-          'account/kick',
           'account/multiAccountImport',
+          'account/accountDelete',
+          'account/accountCheck',
+          'account/kick',
+          'account/queryState',
         ]
       },
       {
         title: '单聊消息',
         collapsable: false,
         children: [
-          'singleChat/queryMsg',
-          'singleChat/withdrawMsg',
-          'singleChat/sendMsg.md',
+          'singleChat/sendMsg',
           'singleChat/batchSendMsg',
           'singleChat/importMsg',
+          'singleChat/queryMsg',
+          'singleChat/withdrawMsg',
         ]
       },
       {
@@ -55,8 +55,8 @@ module.exports = {
           'sns/deleteFriend',
           'sns/deleteAllFriend',
           'sns/checkFriend',
-          'sns/getFriends',
           'sns/getFriendList',
+          'sns/getFriends',
           'sns/addBlackList',
           'sns/delBlackList',
           'sns/pullBlackList',
