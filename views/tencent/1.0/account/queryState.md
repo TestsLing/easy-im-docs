@@ -2,6 +2,10 @@
 title: 查询帐号在线状态
 date: 2020-08-26
 ---
+# 应用场景
+- 该接口适用于查询用户在线状态。
+
+# 使用示例
 ```php
 
 /**
@@ -12,3 +16,5 @@ date: 2020-08-26
 $result = $account->queryState(['user_id1', 'user_id2', 'user_id3', ...], 1);
 
 ```
+# 应答示例
+- 详情请参考[这里](https://cloud.tencent.com/document/product/269/2566)

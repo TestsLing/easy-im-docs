@@ -3,6 +3,10 @@ title: 导入单个帐号
 date: 2020-08-26
 ---
 
+# 应用场景
+- 该接口适合于用户在注册账号时使用，将用户的唯一标识导入腾讯IM中，为该账号创建一个对应的内部ID。
+
+# 使用示例
 ```php
 
 /**
@@ -14,3 +18,6 @@ date: 2020-08-26
  $result = $account->accountImport('your user_id', 'your name', 'your avatar');
 
 ```
+
+# 应答示例
+- 详情请参考[这里](https://cloud.tencent.com/document/product/269/1608)
