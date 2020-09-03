@@ -8,7 +8,7 @@ stages:
 vue-build:
   stage: build
   only:
-    - dev
+    - master
   script:
     - npm cache verify
     - npm install
@@ -27,14 +27,13 @@ vue-build:
 deploy-prod:
   image: kroniak/ssh-client
   only:
-    - dev
+    - master
   stage: deploy
   needs:
     - vue-build
   script:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - echo $DEPLOY_SERVER_USER@$DEPLOY_SERVER_HOST_PUB:$PROJECT_DIR
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
     - echo "$SSH_PRIVATE_KEY_STAGING" > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa && shopt -s expand_aliases && alias ssh="ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no $DEPLOY_SERVER_USER@$DEPLOY_SERVER_HOST_PUB"
