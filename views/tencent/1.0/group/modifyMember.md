@@ -3,8 +3,13 @@ title: 修改群成员资料
 date: 2020-08-26
 ---
 
-```php
+# 应用场景
 
+- 该接口适用于修改群成员资料，多数用于用户对自己群资料修改名片、消息屏蔽功能以及群管理员设置管理员或禁言群成员。
+
+# 使用示例
+
+```php
 use EasyIM\TencentIM\Group\Parameter\Base\CommonParameter;
 
 /**
@@ -19,4 +24,9 @@ use EasyIM\TencentIM\Group\Parameter\Base\CommonParameter;
 
 $tag = new CommonParameter(['Key' => 'MemberDefined3', 'Value' => 'ModifyData3']);
 $group->member->modifyMember('group_1314', 'evan2', 'Admin', 'AcceptAndNotify', '群名片', parameterList($tag), 10);
+
 ```
+
+# 应答示例
+
+- 详情请参考[这里](https://cloud.tencent.com/document/product/269/1623)

@@ -3,6 +3,12 @@ title: 修改群基础资料
 date: 2020-08-26
 ---
 
+# 应用场景
+
+- 该接口适用于修改群基础资料，多数用于设置群名称、群公告、群简介之类，也可用于设置全体禁言。
+
+# 使用示例
+
 ```php
 use EasyIM\TencentIM\Group\Parameter\Base\CommonParameter;
 use EasyIM\TencentIM\Kernel\Constant\GroupConstant;
@@ -21,4 +27,9 @@ use EasyIM\TencentIM\Kernel\Constant\GroupConstant;
 
 $tag = new CommonParameter(['Key' => 'MemberDefined3', 'Value' => 'ModifyData3']);
 $group->modify('group_1314', 'EasyIM-1群', '欢迎使用easyIM','easyIM群公告', 'www.easyim.cn/profile.jpg', 500, 'Off', GroupConstant::FREE_ACCESS, parameterList($tag))
+
 ```
+
+# 应答示例
+
+- 详情请参考[这里](https://cloud.tencent.com/document/product/269/1620)

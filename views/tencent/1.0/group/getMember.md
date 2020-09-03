@@ -3,6 +3,12 @@ title: 获取群成员详细资料
 date: 2020-08-26
 ---
 
+# 应用场景
+
+- 该接口适用于获取群成员详情，多数用于群成员列表的输出。
+
+# 使用示例
+
 ```php
 
 /**
@@ -15,4 +21,9 @@ date: 2020-08-26
  */
 
 $response = $group->member->getMember('group_1314', 100, 0, ["Role", "JoinTime", "MsgSeq"], ["Owner", "Member"], ['MemberDefined1']);
+
 ```
+
+# 应答示例
+
+- 详情请参考[这里](https://cloud.tencent.com/document/product/269/1617)
