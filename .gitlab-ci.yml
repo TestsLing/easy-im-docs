@@ -8,7 +8,7 @@ stages:
 vue-build:
   stage: build
   only:
-    - master
+    - dev
   script:
     - npm cache verify
     - npm install
@@ -27,7 +27,7 @@ vue-build:
 deploy-prod:
   image: kroniak/ssh-client
   only:
-    - master
+    - dev
   stage: deploy
   needs:
     - vue-build
