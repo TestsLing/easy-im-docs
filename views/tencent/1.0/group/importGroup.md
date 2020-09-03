@@ -3,6 +3,11 @@ title: 导入群基础资料
 date: 2020-08-26
 ---
 
+# 应用场景
+
+- 该接口适用于导入群基础资料，多数用于APP从其他即时通讯系统迁移到即时通讯IM。
+
+# 使用示例
 
 ```php
 use EasyIM\TencentIM\Group\Parameter\Base\CommonParameter;
@@ -36,4 +41,9 @@ $group->import->importGroup(
             parameterList($tag),
             time() - 1
         );
+
 ```
+
+# 应答示例
+
+- 详情请参考[这里](https://cloud.tencent.com/document/product/269/1634)

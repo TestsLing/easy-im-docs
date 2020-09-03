@@ -3,6 +3,11 @@ title: 创建群组
 date: 2020-08-26
 ---
 
+# 应用场景
+
+- 该接口适用于创建群组，多半用于创建聊天室用，也可以配合直播间创建聊天室。详情请参考[这里](https://cloud.tencent.com/document/product/269/1615)
+
+# 使用示例
 
 ```php
 
@@ -44,3 +49,7 @@ $group->create(
 
 
 ```
+
+# 应答示例
+
+- 详情请参考[这里](https://cloud.tencent.com/document/product/269/1615)

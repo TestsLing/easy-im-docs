@@ -3,6 +3,11 @@ title: 获取用户所加入的群组
 date: 2020-08-26
 ---
 
+# 应用场景
+
+- 该接口适用于用户获取所加入的群组，多数用于用户查看自己的群组列表，也可以分类查找群组。
+
+# 使用示例
 
 ```php
 
@@ -23,4 +28,9 @@ $filter = new ResponseFilterParameter();
 $filter->setGroupBaseInfoFilter(["Type", "Name"]);
 
 $response = $group->member->getJoined('evan2', 0, 1, 20, 0, GroupConstant::PUBLIC, $filter);
+
 ```
+
+# 应答示例
+
+- 详情请参考[这里](https://cloud.tencent.com/document/product/269/1625)
