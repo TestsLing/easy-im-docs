@@ -20,26 +20,36 @@ features:
   details: 我只会想自己想要什么，从不想自己拥有什么
 ---
 
-
-# Requirement
+## Requirement
 
 1. PHP >= 7.2
-2. **[Composer](https://getcomposer.org/)**
-3. openssl 拓展
+2. [Composer](https://getcomposer.org/)
+3. Openssl拓展
 
-# Installation
+## Installation
 
 ```shell
-$ composer require "longing/tencent-im"
+$ composer require longing/easy-im:~1.0 -vvv
 ```
-
-# Usage
+## Usage
 
 基本使用（以服务端为例）:
 
 ```php
+use EasyIM\Factory;
 
+$options = [
+    'sdk_app_id'    => '1400306676',                                                        // sdkAppId
+    'secret'        => '3e373d1ef02ef192ee26c94760681cdf492b4b7f053fc16504d30a77a028e76d',  // secret
+    'identifier'    => 'admin',                                                             // 管理员账号
+    'expire'        => 86400,                                                               // 签名过期时间
+    // ...
+];
+
+$app = Factory::TencentIM($options);
 ```
+
+[更多](https://github.com/TestsLing/easy-im)
 
 
 # Status 
@@ -73,4 +83,5 @@ MIT
 
 # 鸣谢
 
-感谢 ：[午后南杂](https://www.recoluan.com) 
+- [午后南杂](https://www.recoluan.com)          感谢如此优秀的博客框架
+- [easywechat](https://www.easywechat.com)     感谢如此优秀的`Wechat SDK`

@@ -9,6 +9,19 @@
       <h1>{{ $frontmatter.heroText || $title }}</h1>
       <p class="description">{{ $description }}</p>
       <div>
+        <a target="_black" href="//github.com/TestsLing/easy-im/actions">
+          <img alt="" src="https://github.com/TestsLing/easy-im/workflows/Test/badge.svg"/>
+        </a>
+      <a target="_black" href="//github.com/TestsLing/easy-im/actions">
+          <img alt="" src="https://github.com/TestsLing/easy-im/workflows/Lint/badge.svg"/>
+        </a>
+        <a target="_black" href="//scrutinizer-ci.com/g/TestsLing/easy-im/?branch=master">
+          <img alt="" src="https://scrutinizer-ci.com/g/TestsLing/easy-im/badges/quality-score.png?b=master"/>
+        </a>
+
+        <a target="_black" href="//scrutinizer-ci.com/g/TestsLing/easy-im/?branch=master">
+          <img alt="" src="https://scrutinizer-ci.com/g/TestsLing/easy-im/badges/coverage.png?b=master"/>
+        </a>
         <a target="_black" href="https://github.com/TestsLing/easy-im">
           <img alt="GitHub license" src="https://img.shields.io/github/license/TestsLing/easy-im?style=flat&logo=github">
         </a>
