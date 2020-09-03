@@ -3,17 +3,22 @@ title: 在群组中发送普通消息
 date: 2020-08-26
 ---
 
+# 应用场景
+
+- 该接口适用于群组发送普通消息，多数用于用户发送普通消息以及发送离线推送。
+
+# 使用示例
+
 如果有在后台配置离线推送的，可以传递推送对象，没有配置的默认传null就好
 
 ```php
-
 use EasyIM\TencentIM\Kernel\Messages\TIMTextElem;
 use EasyIM\TencentIM\Kernel\OfflinePushInfo\AndroidInfo;
 use EasyIM\TencentIM\Kernel\OfflinePushInfo\ApnsInfo;
 use EasyIM\TencentIM\Kernel\OfflinePushInfo\OfflinePushElem;
 
 /**
- * @param string               $groupId                     群主id
+ * @param string               $groupId                     群组id
  * @param MessageInterface     $msgBody                     消息
  * @param string|null          $fromAccount                 发送者用户id
  * @param string|null          $msgPriority                 消息优先级
@@ -46,3 +51,7 @@ $offlinePushElem->setApnsInfo($apns);
 $group->message->sendMsg('group_1314', $text, 'evan2', 1, [], $offlinePushElem, 1);
 
 ```
+
+# 应答示例
+
+- 详情请参考[这里](https://cloud.tencent.com/document/product/269/1629)

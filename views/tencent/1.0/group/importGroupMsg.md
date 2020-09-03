@@ -3,6 +3,12 @@ title: 导入群消息
 date: 2020-08-26
 ---
 
+# 应用场景
+
+- 该接口适用于导入群消息，多数用于APP从其他即时通讯系统迁移到即时通讯IM。
+
+# 使用示例
+
 ```php
 use EasyIM\TencentIM\Kernel\Messages\TIMFaceElem;
 use EasyIM\TencentIM\Kernel\Messages\TIMTextElem;
@@ -28,4 +34,9 @@ $response = $this->group->import->importGroupMsg('group_1314', $importMsgListPar
 
 $messages = [$importMsgListParameter, $importMsgListParameter];
 $response = $this->group->import->importGroupMsg('group_1314', ...$messages);
+
 ```
+
+# 应答示例
+
+- 详情请参考[这里](https://cloud.tencent.com/document/product/269/1635)
