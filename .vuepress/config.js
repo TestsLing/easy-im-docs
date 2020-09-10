@@ -8,7 +8,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
     ['meta', { name: 'author', content: 'EasyIM' }],
-    ['meta', { name: 'keywords', content: 'EsayIM,IM,docs' }],
+    ['meta', { name: 'keywords', content: 'EasyIM,IM,docs,tencentIM,easyIM,easyIM文档,IM文档,即时通信IM' }],
     // ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#42b983' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -24,7 +24,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
-      title: "EsayIM",
+      title: "EasyIM",
       description: '📦 基于腾讯IM的php-sdk'
     },
     // '/en/': {

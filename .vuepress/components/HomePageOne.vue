@@ -1,50 +1,53 @@
 <template>
   <article class="home-page-one-wrapper">
-    <section class="description">
+    <section class="main">
       <!-- <img
         v-if="$frontmatter.heroImage"
         :style="heroImageStyle || {}"
         :src="$withBase($frontmatter.heroImage)"
         alt="hero"> -->
-      <h1>{{ $frontmatter.heroText || $title }}</h1>
-      <p class="description">{{ $description }}</p>
       <div>
-        <a target="_black" href="//github.com/TestsLing/easy-im/actions">
-          <img alt="" src="https://github.com/TestsLing/easy-im/workflows/Test/badge.svg"/>
-        </a>
-      <a target="_black" href="//github.com/TestsLing/easy-im/actions">
-          <img alt="" src="https://github.com/TestsLing/easy-im/workflows/Lint/badge.svg"/>
-        </a>
-        <a target="_black" href="//scrutinizer-ci.com/g/TestsLing/easy-im/?branch=master">
-          <img alt="" src="https://scrutinizer-ci.com/g/TestsLing/easy-im/badges/quality-score.png?b=master"/>
-        </a>
+        <h1>{{ $frontmatter.heroText || $title }}</h1>
+        <p class="description">{{ $description }}</p>
+        <div>
+          <a target="_black" href="//github.com/TestsLing/easy-im/actions">
+            <img alt="" src="https://github.com/TestsLing/easy-im/workflows/Test/badge.svg"/>
+          </a>
+          <a target="_black" href="//github.com/TestsLing/easy-im/actions">
+            <img alt="" src="https://github.com/TestsLing/easy-im/workflows/Lint/badge.svg"/>
+          </a>
+          <a target="_black" href="//scrutinizer-ci.com/g/TestsLing/easy-im/?branch=master">
+            <img alt="" src="https://scrutinizer-ci.com/g/TestsLing/easy-im/badges/quality-score.png?b=master"/>
+          </a>
 
-        <a target="_black" href="//scrutinizer-ci.com/g/TestsLing/easy-im/?branch=master">
-          <img alt="" src="https://scrutinizer-ci.com/g/TestsLing/easy-im/badges/coverage.png?b=master"/>
-        </a>
-        <a target="_black" href="https://github.com/TestsLing/easy-im">
-          <img alt="GitHub license" src="https://img.shields.io/github/license/TestsLing/easy-im?style=flat&logo=github">
-        </a>
-        <a target="_black" href="https://github.com/TestsLing/easy-im">
-          <img alt="GitHub stars" src="https://img.shields.io/github/stars/TestsLing/easy-im?style=flat&logo=github">
-        </a>
-        <a target="_black" href="https://github.com/TestsLing/easy-im">
-          <img alt="GitHub forks" src="https://img.shields.io/github/forks/TestsLing/easy-im?style=flat&logo=github">
-        </a>
-        <a target="_black" href="https://github.com/TestsLing/easy-im">
-          <img alt="" src="https://app.codacy.com/project/badge/Grade/70a3149ea0ce4d2abe5bd3554480c0eb">
-        </a>
-        <a target="_black" href="https://github.com/TestsLing/easy-im">
-          <img alt="" src="https://badgen.net/packagist/dt/longing/easy-im"/>
-        </a>
-        <a target="_black" href="https://github.com/TestsLing/easy-im">
-          <img alt="" src="https://badgen.net/packagist/php/longing/easy-im"/>
-        </a>
+          <a target="_black" href="//scrutinizer-ci.com/g/TestsLing/easy-im/?branch=master">
+            <img alt="" src="https://scrutinizer-ci.com/g/TestsLing/easy-im/badges/coverage.png?b=master"/>
+          </a>
+          <a target="_black" href="https://github.com/TestsLing/easy-im">
+            <img alt="GitHub license" src="https://img.shields.io/github/license/TestsLing/easy-im?style=flat&logo=github">
+          </a>
+          <a target="_black" href="https://github.com/TestsLing/easy-im">
+            <img alt="GitHub stars" src="https://img.shields.io/github/stars/TestsLing/easy-im?style=flat&logo=github">
+          </a>
+          <a target="_black" href="https://github.com/TestsLing/easy-im">
+            <img alt="GitHub forks" src="https://img.shields.io/github/forks/TestsLing/easy-im?style=flat&logo=github">
+          </a>
+          <a target="_black" href="https://github.com/TestsLing/easy-im">
+            <img alt="" src="https://app.codacy.com/project/badge/Grade/70a3149ea0ce4d2abe5bd3554480c0eb">
+          </a>
+          <a target="_black" href="https://github.com/TestsLing/easy-im">
+            <img alt="" src="https://badgen.net/packagist/dt/longing/easy-im"/>
+          </a>
+          <a target="_black" href="https://github.com/TestsLing/easy-im">
+            <img alt="" src="https://badgen.net/packagist/php/longing/easy-im"/>
+          </a>
+        </div>
+        <router-link class="btn-about" :to="$frontmatter.actionLink">{{ $frontmatter.actionText }}</router-link>
+        <!-- <img class="banner" src="./images/blog.svg" alt=""> -->
       </div>
-      <router-link class="btn-about" :to="$frontmatter.actionLink">{{ $frontmatter.actionText }}</router-link>
-      <img class="banner" src="./images/blog.svg" alt="">
+      
     </section>
-    <section class="wish yesterday">
+    <!-- <section class="wish yesterday">
       <div class="wish-inner">
         <div class="img-wrapper">
           <img src="./images/yesterday.svg" alt="">
@@ -76,7 +79,7 @@
           <p class="description">{{ features[2].details }}</p>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="md-content-wrapper">
       <Content/>
     </section>
@@ -211,18 +214,32 @@ export default {
   padding-top: 3.4rem;
 
   section {
-    &.description {
+    &.main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       box-sizing: border-box;
-      margin: 0 auto 6rem;
-      max-width: 46rem;
+      margin: 0 auto;
       width: 100%;
+      height: calc(100vh - 3.4rem);
+      overflow: hidden;
       text-align: center;
+      background: url(./images/back.svg) 50%/cover no-repeat;
 
       h1 {
-        margin-top: 8rem;
+        font-size: 3.6rem
       }
 
+      &.description {
+        box-sizing: border-box;
+        margin: 0 auto 6rem;
+        max-width: 46rem;
+        width: 100%;
+        text-align: center;
+      }
+      
       p {
+        font-size: 20px;
         margin-bottom: 2rem;
       }
 
