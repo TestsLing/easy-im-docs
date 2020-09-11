@@ -18,6 +18,7 @@ features:
   details: 是一个好东西，也许是最好的，好东西是不会消亡的
 - title: 那时候
   details: 我只会想自己想要什么，从不想自己拥有什么
+heroText: EasyIM
 ---
 
 ## Requirement

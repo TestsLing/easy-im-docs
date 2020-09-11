@@ -68,10 +68,10 @@ module.exports = {
     '@vuepress-reco/extract-code',
     'flowchart',
     ['sitemap', {
-      hostname: 'http://docs.aoppp.com'
+      hostname: 'https://www.easyim.cn'
     }],
     ['@vuepress-reco/rss', {
-      site_url: 'http://docs.aoppp.com',
+      site_url: 'https://www.easyim.cn',
       copyright: ''
     }],
     require('./plugins/notification/index')
